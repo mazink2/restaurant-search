@@ -4,9 +4,11 @@ import Header from "./src/components/Header";
 import Search from "./src/components/Search";
 import { useState } from "react";
 import Categories from "./src/components/Categories";
+import Restaurants from "./src/components/Restaurants";
 
 export default function App() {
-  const [term, setTerm] = useState("Burger");
+  // const [term, setTerm] = useState("Burger");
+  const [term, setTerm] = useState("");
 
   const commonCategories = [
     {
@@ -46,6 +48,7 @@ export default function App() {
         term={term}
         setTerm={setTerm}
       />
+      <Restaurants term={term} />
       <StatusBar style="auto" />
     </View>
   );
@@ -53,7 +56,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     // backgroundColor: '#fff',
     // alignItems: 'center',
     // justifyContent: 'center',
