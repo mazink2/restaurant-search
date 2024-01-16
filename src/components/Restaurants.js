@@ -12,7 +12,7 @@ export default function Restaurants({ term }) {
     }
   }, [term])
 
-  console.log({ data, loading, error })
+  // console.log({ data, loading, error })
 
   if (loading) return <ActivityIndicator size="large" marginVertical={30} />
 
